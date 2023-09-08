@@ -1,0 +1,24 @@
+GET http://localhost:3000
+
+###
+POST http://localhost:3000/api/add
+Content-Type: application/json
+
+{
+  "name": "Spiderman",
+  "genre": "Single Player, Story Driven",
+  "year": "2018",
+  "rating": "8/10"
+}
+
+###
+PATCH http://localhost:3000/api/update/4
+Content-Type: application/json
+
+{
+    "name": "Spiderman 2018 Remastered PC"
+}
+
+###
+DELETE http://localhost:3000/api/delete/3
+Content-Type: application/json
