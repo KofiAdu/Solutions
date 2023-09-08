@@ -1,24 +1,48 @@
-GET http://localhost:3000
-
-###
-POST http://localhost:3000/api/add
+POST http://localhost:5000/register
 Content-Type: application/json
 
 {
-  "name": "Spiderman",
-  "genre": "Single Player, Story Driven",
-  "year": "2018",
-  "rating": "8/10"
+    "username": "kofiadu",
+    "password": "12345"
 }
 
 ###
-PATCH http://localhost:3000/api/update/4
+POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "name": "Spiderman 2018 Remastered PC"
+    "username": "kofiadu",
+    "password": "12345"
 }
 
 ###
-DELETE http://localhost:3000/api/delete/3
+GET http://localhost:5000/api/details
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6NiwiaWF0IjoxNjk0MTY3NTY4LCJleHAiOjE2OTQxNzQ3Njh9.lYhl5BrFjIECQIYgIYub6yfiMh3kx3NsF3LXN5TI8PA
+
+###
+POST http://localhost:5000/api/add
+Content-Type: application/json
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6NiwiaWF0IjoxNjk0MTY3NTY4LCJleHAiOjE2OTQxNzQ3Njh9.lYhl5BrFjIECQIYgIYub6yfiMh3kx3NsF3LXN5TI8PA
+
+{
+    "fullname": "Mehdi",
+    "favouriteCountry": "France",
+    "favouriteTeam": "French National Team",
+    "favouritePlayer": "Didier Deschamps",
+    "favouriteCoach": "Alegri"
+}
+
+###
+PATCH http://localhost:5000/api/edit/3
+Content-Type: application/json
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6NiwiaWF0IjoxNjk0MTY3NTY4LCJleHAiOjE2OTQxNzQ3Njh9.lYhl5BrFjIECQIYgIYub6yfiMh3kx3NsF3LXN5TI8PA
+
+{
+    "fullname": "Mehdi Belila"
+}
+
+###
+DELETE http://localhost:5000/api/delete/3
+Content-Type: application/json
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6NiwiaWF0IjoxNjk0MTY3NTY4LCJleHAiOjE2OTQxNzQ3Njh9.lYhl5BrFjIECQIYgIYub6yfiMh3kx3NsF3LXN5TI8PA
