@@ -15,4 +15,7 @@ Authenticated users can access and manage their personal data, such as favorite 
 The API enforces authentication using a middleware and securely hashes user passwords. 
 It uses MySQL database for data storage. Additionally, there's a logout endpoint to end a user's session.
 
+Also, I added a test.http file for testing
+
 Note: The jwt secret key and the db login details are supposed to be in a .env file. This is just aa soltuion for the challenge.
+
